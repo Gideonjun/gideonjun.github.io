@@ -1,0 +1,260 @@
+
+/*MOBILE FIRST*/
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-areas: 
+        "title title"
+        "menu  menu"
+        "main  main"
+        "main  main"
+        "ad1   ad1"
+        "ad2   ad2"
+        "ad3   ad3"
+        "foot  foot"; 
+}
+
+.header{
+  grid-area: title;
+} 
+
+.main{
+  grid-area: main;
+}
+
+#menu {
+  grid-area: menu;
+}
+
+.ad1 {
+  grid-area: ad1;
+  background-color: #FFF091;
+}
+.ad2 {
+  grid-area: ad2;
+  background-color: #FFF091;
+}
+
+.ad3 {
+  grid-area: ad3;
+  background-color: #FFF091;
+}
+
+.foot {
+  grid-area: foot;
+}
+
+.slider {
+  display: none;
+}
+
+nav {
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex-grow: 1;
+  display: flex;
+  padding: 1em;
+  margin: 0.4em;
+  list-style: none;
+  justify-content: center;
+}
+
+nav ul li:hover {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+nav > ul > li > a {
+  color: #000;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+}
+
+.menutoggle {
+  margin-left: auto;
+}
+
+.menutoggle a {
+  font-size: 2em;
+  color: #000;
+  text-decoration: none;
+}
+
+.active {
+  max-height: 400px;
+  transition: max-height 0.5s;
+}
+
+.inactive {
+  max-height: 0px;
+  transition: max-height 0.5s;
+}
+
+/*Tablet*/
+
+@media only screen and (min-width: 601px) and (max-width: 800px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5em;
+    grid-template-areas: 
+          "title title title"
+          "menu  menu  menu"
+          "slider slider slider"
+          "main  main main"
+          "main  main main"
+          "ad1 ad2 ad3"
+          "foot  foot  foot"; 
+  }
+
+  nav ul {
+    flex-flow: row;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+    border: unset;
+  }
+
+  .menutoggle {
+    display: none;
+  }
+
+  .active, .inactive {
+    max-height: unset;
+  }
+
+  .ad3 {
+    display: unset;  
+    grid-area: ad3;
+    background-color: #FFF091;  
+  }
+
+  .slider {
+    display: unset;
+    grid-area: slider;
+  }
+}
+
+/*Klein desktop*/
+
+@media only screen and (min-width: 801px) and (max-width: 1049px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5em;
+    grid-template-areas: 
+          "title title title"
+          "menu  menu  menu"
+          "slider slider slider"
+          "main  main main"
+          "main  main main"
+          "ad1 ad2 ad3"
+          "foot  foot  foot"; 
+  }
+
+  nav ul {
+    flex-flow: row;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+    border: unset;
+  }
+
+  .menutoggle {
+    display: none;
+  }
+
+  .active, .inactive {
+    max-height: unset;
+  }
+
+  .ad3 {
+    display: unset;  
+    grid-area: ad3;
+    background-color: #FFF091;  
+  }
+
+  .slider {
+    display: unset;
+    grid-area: slider;
+  }
+}
+
+/*Grote desktop*/
+
+@media only screen and (min-width: 1050px){
+  body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-gap: 0px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0.5em;
+    grid-template-areas: 
+          "title title title"
+          "menu  menu  menu"
+          "slider slider slider"
+          "main  main  ad1"
+          "main  main  ad2"
+          "foot  foot  foot"; 
+  }
+
+  nav ul {
+    flex-flow: row;
+  }
+
+  nav ul li {
+    padding: 0.5em;
+    border: unset;
+  }
+
+  .menutoggle {
+    display: none;
+  }
+
+  .active, .inactive {
+    max-height: unset;
+  }
+
+  .ad3 {
+    display: none;
+  }
+
+  .slider {
+    display: unset;
+    grid-area: slider;
+  }
+}
+
+
+
+
+
+
+
+
